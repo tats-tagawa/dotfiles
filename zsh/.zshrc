@@ -1,9 +1,7 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$VOLTA_HOME/bin:$PATH"
-export PATH="$HOME/Library/Python/3.9/lib/python/site-packages:$PATH"
-export PATH="$HOME/Library/Python/3.9/bin/:$PATH"
-export PATH="/usr/bin/python3/:$PATH"
+export PATH="/usr/local/bin/python3/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 
