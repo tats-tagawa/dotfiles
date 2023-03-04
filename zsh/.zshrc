@@ -8,9 +8,45 @@ export VOLTA_HOME="$HOME/.volta"
 # set dircolors
 test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 
-# prompt
-PROMPT=$'%~ %B%F{209}\U00BB%f%b '
-RPROMPT='%B%F{075}[%*]%f%b'
+# Vim mode prompt config from Jakob Gerhard Martinussen (JakobGM) #
+# https://github.com/JakobGM/dotfiles/blob/master/autoload/vim.zsh #
+
+bindkey -v
+
+# Default prompt
+export PROMPT=$'%B%F{002}[I]%f%b %~ %B%F{209}\U00BB%f%b '
+
+# And also a beam as the cursor
+echo -ne '\e[5 q'
+
+# Callback for vim mode change
+function zle-keymap-select () {
+    # Only supported in these terminals
+    if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "xterm-kitty" ] || [ "$TERM" = "screen-256color" ]; then
+        if [ $KEYMAP = vicmd ]; then
+            # Command mode
+            export PROMPT=$'%B%F{220}[N]%f%b %~ %B%F{209}\U00BB%f%b '
+
+            # Set block cursor
+            echo -ne '\e[1 q'
+        else
+            # Insert mode
+            export PROMPT=$'%B%F{002}[I]%f%b %~ %B%F{209}\U00BB%f%b '
+
+            # Set beam cursor
+            echo -ne '\e[5 q'
+        fi
+    fi
+}
+
+# Bind the callback
+zle -N zle-keymap-select
+
+# Reduce latency when pressing <Esc>
+export KEYTIMEOUT=1
+
+# RPrompt
+export RPROMPT='%B%F{075}[%*]%f%b'
 
 # update time each second
 TMOUT=1
