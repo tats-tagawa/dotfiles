@@ -14,7 +14,7 @@ test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 bindkey -v
 
 # Default prompt
-export PROMPT=$'%B%F{002}[I]%f%b %~ %B%F{209}\U00BB%f%b '
+export PROMPT=$'%B%F{002}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
 
 # And also a beam as the cursor
 echo -ne '\e[5 q'
@@ -25,13 +25,13 @@ function zle-keymap-select () {
     if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "xterm-kitty" ] || [ "$TERM" = "screen-256color" ]; then
         if [ $KEYMAP = vicmd ]; then
             # Command mode
-            export PROMPT=$'%B%F{220}[N]%f%b %~ %B%F{209}\U00BB%f%b '
+            export PROMPT=$'%B%F{220}[N]%f%b %2~ %B%F{209}\U00BB%f%b '
 
             # Set block cursor
             echo -ne '\e[1 q'
         else
             # Insert mode
-            export PROMPT=$'%B%F{002}[I]%f%b %~ %B%F{209}\U00BB%f%b '
+            export PROMPT=$'%B%F{002}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
 
             # Set beam cursor
             echo -ne '\e[5 q'
