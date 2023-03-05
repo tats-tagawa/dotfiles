@@ -4,7 +4,7 @@ api.Hints.style(" \
   font-family: system-ui, sans serif; \
   font-size: 12px; \
   font-weight: 400; \
-  border: unset; \
+  border: solid 1px #0000D1; \
   padding: 2px; \
   color: #111111; \
   background: unset; \
