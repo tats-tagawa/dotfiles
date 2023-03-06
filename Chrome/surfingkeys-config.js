@@ -25,7 +25,7 @@ api.unmap('<ctrl-i>');
 // set theme
 settings.theme = `
 .sk_theme {
-    font-family: Input Sans Condensed, Charcoal, sans-serif;
+    font-family: system-ui, Input Sans Condensed, Charcoal, sans-serif;
     font-size: 10pt;
     background: #24272e;
     color: #abb2bf;
@@ -56,6 +56,9 @@ settings.theme = `
 }
 .sk_theme #sk_omnibarSearchResult ul li.focused {
     background: #3e4452;
+}
+#sk_omnibarSearchArea .prompt, #sk_omnibarSearchArea .resultPage, #sk_omnibarSearchArea>input {
+    font-size: 16px
 }
 #sk_status, #sk_find {
     font-size: 20pt;
