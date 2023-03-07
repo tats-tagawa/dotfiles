@@ -1,8 +1,10 @@
-settings.scrollStepSize	= 200
+settings.scrollStepSize	= 200;
+settings.smoothScroll = true;
+settings.focusAfterClosed = 'last';
 
 api.Hints.style(" \
   font-family: system-ui, sans serif; \
-  font-size: 12px; \
+  font-size: 14px; \
   font-weight: 400; \
   border: solid 1px #0000D1; \
   padding: 2px; \
@@ -26,7 +28,7 @@ api.unmap('<ctrl-i>');
 settings.theme = `
 .sk_theme {
     font-family: system-ui, Input Sans Condensed, Charcoal, sans-serif;
-    font-size: 10pt;
+    font-size: 12pt;
     background: #24272e;
     color: #abb2bf;
 }
@@ -58,7 +60,7 @@ settings.theme = `
     background: #3e4452;
 }
 #sk_omnibarSearchArea .prompt, #sk_omnibarSearchArea .resultPage, #sk_omnibarSearchArea>input {
-    font-size: 16px
+    font-size: 20px
 }
 #sk_status, #sk_find {
     font-size: 20pt;
