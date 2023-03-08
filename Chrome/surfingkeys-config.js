@@ -2,16 +2,32 @@ settings.scrollStepSize	= 200;
 settings.smoothScroll = true;
 settings.focusAfterClosed = 'last';
 
-api.Hints.style(" \
+// Follow link mode hints
+api.Hints.style(' \
   font-family: system-ui, sans serif; \
   font-size: 14px; \
-  font-weight: 400; \
-  border: solid 1px #0000D1; \
+  font-weight: 700; \
+  border: solid 1px #000000; \
   padding: 2px; \
   color: #111111; \
   background: unset; \
   background-color: #FFA500; \
-");
+  box-shadow: 0px 0px; \
+');
+
+// Visual mode hints
+api.Hints.style(
+  'div, div.begin { \
+    font-family: system-ui, sans serif; \
+    font-size: 14px; \
+    font-weight: 700; \
+    border: solid 1px #000000; \
+    padding: 2px; \
+    color: #111111; \
+    background: unset; \
+    background-color: #E0E0E0; \
+    box-shadow: 0px 0px;} \
+', 'text');
 
 // an example to create a new mapping `ctrl-y`
 api.mapkey('<ctrl-y>', 'Show me the money', function() {
