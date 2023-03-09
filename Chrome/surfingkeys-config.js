@@ -2,6 +2,14 @@ settings.scrollStepSize	= 200;
 settings.smoothScroll = true;
 settings.focusAfterClosed = 'last';
 
+// set h/l to go back/forward in history
+api.map('h','S')
+api.map('l','D')
+
+// set H/L to go to the left/right tab of open tab 
+api.map('H','E')
+api.map('L','R')
+
 // Follow link mode hints
 api.Hints.style(' \
   font-family: system-ui, sans serif; \
