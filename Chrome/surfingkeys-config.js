@@ -73,7 +73,12 @@ settings.theme = `
     background: #3e4452;
 }
 #sk_omnibarSearchArea .prompt, #sk_omnibarSearchArea .resultPage, #sk_omnibarSearchArea>input {
-    font-size: 20px
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+}
+#sk_omnibarSearchArea .prompt .separator {
+    padding-left: 5px;
 }
 #sk_status, #sk_find {
     font-size: 20pt;
