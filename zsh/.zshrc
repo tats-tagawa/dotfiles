@@ -8,44 +8,41 @@ export VOLTA_HOME="$HOME/.volta"
 # set dircolors
 test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 
-# Vim mode prompt config from Jakob Gerhard Martinussen (JakobGM) #
-# https://github.com/JakobGM/dotfiles/blob/master/autoload/vim.zsh #
+# load zsh-vi-mode plugin
+# https://github.com/jeffreytse/zsh-vi-mode
+source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
-bindkey -v
+# start in Insert Mode
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
-# Default prompt
-export PROMPT=$'%B%F{002}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
+ZVM_VI_ESCAPE_BINDKEY=jk
 
-# And also a beam as the cursor
-echo -ne '\e[5 q'
-
-# Callback for vim mode change
-function zle-keymap-select () {
-    # Only supported in these terminals
-    if [ "$TERM" = "xterm-256color" ] || [ "$TERM" = "xterm-kitty" ] || [ "$TERM" = "screen-256color" ]; then
-        if [ $KEYMAP = vicmd ]; then
-            # Command mode
-            export PROMPT=$'%B%F{220}[N]%f%b %2~ %B%F{209}\U00BB%f%b '
-
-            # Set block cursor
-            echo -ne '\e[1 q'
-        else
-            # Insert mode
-            export PROMPT=$'%B%F{002}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
-
-            # Set beam cursor
-            echo -ne '\e[5 q'
-        fi
-    fi
+# the plugin will auto execute this zvm_after_select_vi_mode function
+function zvm_after_select_vi_mode() {
+  case $ZVM_MODE in
+    $ZVM_MODE_NORMAL)
+      export PROMPT=$'%B%F{197}[N]%f%b %2~ %B%F{209}\U00BB%f%b '
+    ;;
+    $ZVM_MODE_INSERT)
+      export PROMPT=$'%B%F{114}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
+      # Something you want to do...
+    ;;
+    $ZVM_MODE_VISUAL)
+      export PROMPT=$'%B%F{221}[V]%f%b %2~ %B%F{209}\U00BB%f%b '
+      # Something you want to do...
+    ;;
+    $ZVM_MODE_VISUAL_LINE)
+      export PROMPT=$'%B%F{123}[L]%f%b %2~ %B%F{209}\U00BB%f%b '
+      # Something you want to do...
+    ;;
+    $ZVM_MODE_REPLACE)
+      export PROMPT=$'%B%F{026}[R]%f%b %2~ %B%F{209}\U00BB%f%b '
+      # Something you want to do...
+    ;;
+  esac
 }
 
-# Bind the callback
-zle -N zle-keymap-select
-
-# Reduce latency when pressing <Esc>
-export KEYTIMEOUT=1
-
-# RPrompt
+# show current time in right prompt
 export RPROMPT='%B%F{075}[%*]%f%b'
 
 # update time each second
