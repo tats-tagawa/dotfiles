@@ -45,12 +45,6 @@ function zvm_after_select_vi_mode() {
 # show current time in right prompt
 export RPROMPT='%B%F{075}[%*]%f%b'
 
-# update time each second
-TMOUT=1
-TRAPALRM() {
-  zle reset-prompt
-}
-
 # easier navigation
 alias ..='cd ..'
 alias ...='cd ../../'
