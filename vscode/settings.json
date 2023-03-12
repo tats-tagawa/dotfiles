@@ -1,0 +1,72 @@
+{
+    "workbench.colorTheme": "Flatland Monokai",
+    "editor.fontSize": 14,
+    "editor.cursorSurroundingLines": 5,
+    // vim
+    "vim.cursorStylePerMode.insert": "line",
+    "vim.cursorStylePerMode.normal": "block-outline",
+    "vim.cursorStylePerMode.visual": "block",
+    "vim.leader": " ",
+    "vim.highlightedyank.enable": true,
+    "vim.smartRelativeLine": true,
+    "vim.useSystemClipboard": true,
+    "editor.fontFamily": "'Fira Code',Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visualblock": "block",
+    "vim.cursorStylePerMode.visualline": "block",
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        }
+    ],
+    "editor.wordWrap": "on",
+    "workbench.sideBar.location": "right",
+    "highlight-matching-tag.highlightFromContent": true,
+    "terminal.integrated.fontSize": 14,
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.iconTheme": "vscode-icons",
+    "security.workspace.trust.untrustedFiles": "open",
+    "editor.accessibilitySupport": "off",
+    "vsicons.dontShowNewVersionMessage": true,
+    "vim.vimrc.enable": true,
+    "editor.detectIndentation": false,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "editor.tabSize": 4,
+    },
+    "[javascript]": {
+        "editor.maxTokenizationLineLength": 2500,
+        "editor.tabSize": 2,
+    },
+    "[html]": {
+        "editor.suggest.insertMode": "replace",
+        "editor.tabSize": 2
+    },
+    "[python]": {
+        "editor.formatOnType": true,
+        "editor.tabSize": 2
+    },
+    "python.linting.pylintArgs": [
+        "--disable=C0111"
+    ],
+}
