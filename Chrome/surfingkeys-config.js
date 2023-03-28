@@ -13,7 +13,7 @@ api.map('L','R')
 // Follow link mode hints
 api.Hints.style(' \
   font-family: system-ui, sans serif; \
-  font-size: 14px; \
+  font-size: 11px; \
   font-weight: 700; \
   border: solid 1px #000000; \
   padding: 2px; \
@@ -27,7 +27,7 @@ api.Hints.style(' \
 api.Hints.style(
   'div, div.begin { \
     font-family: system-ui, sans serif; \
-    font-size: 14px; \
+    font-size: 11px; \
     font-weight: 700; \
     border: solid 1px #000000; \
     padding: 2px; \
