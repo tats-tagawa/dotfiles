@@ -10,10 +10,12 @@ api.map('l','D')
 api.map('H','E')
 api.map('L','R')
 
+api.map('<Ctrl-j>','<Ctrl-6>')
+
 // Follow link mode hints
 api.Hints.style(' \
   font-family: system-ui, sans serif; \
-  font-size: 11px; \
+  font-size: 14px; \
   font-weight: 700; \
   border: solid 1px #000000; \
   padding: 2px; \
@@ -27,7 +29,7 @@ api.Hints.style(' \
 api.Hints.style(
   'div, div.begin { \
     font-family: system-ui, sans serif; \
-    font-size: 11px; \
+    font-size: 14px; \
     font-weight: 700; \
     border: solid 1px #000000; \
     padding: 2px; \
@@ -36,6 +38,7 @@ api.Hints.style(
     background-color: #E0E0E0; \
     box-shadow: 0px 0px;} \
 ', 'text');
+
 
 // set theme
 settings.theme = `
