@@ -1,6 +1,7 @@
-settings.scrollStepSize	= 200;
+settings.scrollStepSize	= 300;
 settings.smoothScroll = true;
 settings.focusAfterClosed = 'last';
+settings.hintAlign = 'left';
 
 // set h/l to go back/forward in history
 api.map('h','S')
