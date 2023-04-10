@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Flatland Monokai",
-  "editor.fontSize": 14,
+  "editor.fontSize": 16,
   "editor.cursorSurroundingLines": 5,
   // vim
   "vim.cursorStylePerMode.insert": "line",
@@ -93,5 +93,6 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+},
+"workbench.startupEditor": "none"
 }
