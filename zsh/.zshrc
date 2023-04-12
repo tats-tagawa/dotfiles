@@ -58,6 +58,12 @@ alias la='gls -A --color=always --group-directories-first'
 alias ll='gls -Ahl --color=always --group-directories-first'
 
 alias vim='nvim'
+alias vims='nvim ~/dotfiles/nvim/lua/tats/keymaps.lua'
+alias vimo='nvim ~/dotfiles/nvim/lua/tats/options.lua'
+alias vimp='nvim ~/dotfiles/nvim/lua/tats/plugins.lua'
+alias nvims='nvim ~/dotfiles/nvim/lua/tats/keymaps.lua'
+alias nvimo='nvim ~/dotfiles/nvim/lua/tats/options.lua'
+alias nvimp='nvim ~/dotfiles/nvim/lua/tats/plugins.lua'
 
 alias python='python3'
 alias py='python3'
