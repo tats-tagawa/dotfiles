@@ -93,6 +93,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-},
-"workbench.startupEditor": "none"
+  },
+  "workbench.startupEditor": "none",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  }
 }

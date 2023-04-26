@@ -28,3 +28,4 @@ set_key("n", "<leader>fg", builtin.live_grep, {})
 set_key("n", "<leader>fb", builtin.buffers, {})
 set_key("n", "<leader>fh", builtin.help_tags, {})
 
+set_key("n", "<leader>pv", vim.cmd.Ex, opts)
