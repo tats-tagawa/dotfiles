@@ -87,7 +87,7 @@
   },
   "[python]": {
     "editor.formatOnType": true,
-    "editor.tabSize": 2
+    "editor.tabSize": 4
   },
   "python.linting.pylintArgs": ["--disable=C0111"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -98,5 +98,10 @@
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
-  }
+},
+"search.showLineNumbers": true,
+"editor.lineNumbers": "relative",
+"[lua]": {
+    "editor.defaultFormatter": "Koihik.vscode-lua-format"
+}
 }

@@ -1,18 +1,2 @@
 // Place your key bindings in this file to override the defaultsauto[]
-[
-  {
-    "key": "space w",
-    "command": "workbench.action.files.save",
-    "when": "editorTextFocus && neovim.mode != 'insert'"
-  },
-  {
-    "key": "space f",
-    "command": "editor.action.formatDocument",
-    "when": "editorTextFocus && neovim.mode !== 'insert'"
-  },
-  {
-    "key": "space r",
-    "command": "editor.action.rename",
-    "when": "editorTextFocus && neovim.mode !== 'insert'"
-  }
-]
+[]
