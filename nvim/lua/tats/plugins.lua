@@ -34,6 +34,10 @@ return require('packer').startup(function(use)
   use 'tanvirtin/monokai.nvim'
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+  use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
@@ -46,6 +50,7 @@ return require('packer').startup(function(use)
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'saadparwaiz1/cmp_luasnip'
+  use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-commentary'
 
   -- Automatically set up your configuration after cloning packer.nvim

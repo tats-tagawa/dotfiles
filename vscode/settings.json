@@ -103,5 +103,6 @@
 "editor.lineNumbers": "relative",
 "[lua]": {
     "editor.defaultFormatter": "Koihik.vscode-lua-format"
-}
+},
+"git.openRepositoryInParentFolders": "never"
 }
