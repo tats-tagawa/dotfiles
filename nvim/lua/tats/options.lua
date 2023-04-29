@@ -18,7 +18,10 @@ for k, v in pairs(options) do
   vim.opt[k] = v
 end
 
-require('monokai').setup { palette = require('monokai').pro }
+colorscheme = catppuccin
+vim.cmd.colorscheme 'catppuccin'
+
+-- require('monokai').setup { palette = require('monokai').pro }
 require("bufferline").setup{}
 
 local cmp = require('cmp')
@@ -110,11 +113,18 @@ ts.setup {
     disable = {},
   },
   ensure_installed = {
-    "json",
-    "yaml",
+    "bash",
     "css",
     "html",
-    "lua"
+    "javascript",
+    "jsdoc",
+    "json",
+    "lua",
+    "python",
+    "regex",
+    "sql",
+    "tsx",
+    "yaml",
   },
   autotag = {
     enable = true,
@@ -123,3 +133,5 @@ ts.setup {
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }
+
+require('gitsigns').setup {}

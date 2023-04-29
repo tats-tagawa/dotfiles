@@ -32,6 +32,7 @@ return require('packer').startup(function(use)
   use 'jacoborus/tender.vim'
   use 'jiangmiao/auto-pairs'
   use 'tanvirtin/monokai.nvim'
+  use {'catppuccin/nvim', as = 'catppuccin'}
   use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
   use {
     'nvim-lualine/lualine.nvim',
@@ -43,6 +44,8 @@ return require('packer').startup(function(use)
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use 'neovim/nvim-lspconfig'
+  use 'glepnir/lspsaga.nvim'
+  use 'jose-elias-alvarez/null-ls.nvim'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -52,6 +55,8 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip'
   use 'nvim-treesitter/nvim-treesitter'
   use 'tpope/vim-commentary'
+  use 'dinhhuy258/git.nvim'
+  use 'lewis6991/gitsigns.nvim'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
