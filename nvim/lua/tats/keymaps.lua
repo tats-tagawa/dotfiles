@@ -18,14 +18,9 @@ set_key("n", "<leader>q", ":wq<cr>", opts)
 
 -- buffer navigation
 set_key("n", "<leader>W", ":bd<cr>", opts)
-set_key("n", "<s-j><s-j>", ":bnext<cr>", opts)
-set_key("n", "<s-k><s-k>", ":bprev<cr>", opts)
+set_key("n", "<s-k><s-k>", ":bnext<cr>", opts)
+set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
 set_key("n", "<C-h>", ":e #<cr>", opts)
 
--- telescope
-set_key("n", "<leader>ff", builtin.find_files, {})
-set_key("n", "<leader>fg", builtin.live_grep, {})
-set_key("n", "<leader>fb", builtin.buffers, {})
-set_key("n", "<leader>fh", builtin.help_tags, {})
-
+-- netrw
 set_key("n", "<leader>pv", vim.cmd.Ex, opts)
