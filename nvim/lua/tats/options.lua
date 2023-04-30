@@ -20,6 +20,9 @@ end
 
 colorscheme = catppuccin
 vim.cmd.colorscheme 'catppuccin'
+require('catppuccin').setup({
+  flavour = "mocha"
+})
 
 -- require('monokai').setup { palette = require('monokai').pro }
 require("bufferline").setup{}
@@ -40,8 +43,7 @@ cmp.setup({
     -- completion = cmp.config.window.bordered(),
     -- documentation = cmp.config.window.bordered(),
   },
-  mapping = cmp.mapping.preset.insert({
-    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+  mapping = cmp.mapping.preset.insert({ ['<C-b>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete(),
     ['<C-e>'] = cmp.mapping.abort(),
