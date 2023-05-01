@@ -1,5 +1,3 @@
-local builtin = require("telescope.builtin")
-
 -- set leader to <Space>
 vim.g.mapleader = " "
 
@@ -16,9 +14,9 @@ set_key("v", "jk", "<esc>", opts)
 set_key("n", "<leader>w", ":w<cr>", opts)
 set_key("n", "<leader>q", ":wq<cr>", opts)
 
- ----------------
- ---- buffer ----
- ----------------
+----------------
+---- buffer ----
+----------------
 
 -- delete buffer
 set_key("n", "<leader>dd", ":bd<cr>", opts)
