@@ -3,6 +3,16 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/usr/local/bin/python3/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# better history searching with arrow keys
+# https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
+
 export VOLTA_HOME="$HOME/.volta"
 
 # source aliases
