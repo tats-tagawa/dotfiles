@@ -5,6 +5,9 @@ export PATH="/usr/local/bin/python3/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export VOLTA_HOME="$HOME/.volta"
 
+# source aliases
+source ~/.alias
+
 # set dircolors
 test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 
@@ -44,29 +47,6 @@ function zvm_after_select_vi_mode() {
 
 # show current time in right prompt
 export RPROMPT='%B%F{075}[%*]%f%b'
-
-# easier navigation
-alias ..='cd ..'
-alias ...='cd ../../'
-alias ....='cd ../../../'
-alias ~='cd ~'
-
-# better ls
-# need coreutils to call gls
-alias ls='gls --color=always --group-directories-first'
-alias la='gls -A --color=always --group-directories-first'
-alias ll='gls -Ahl --color=always --group-directories-first'
-
-alias vim='nvim'
-alias vims='nvim ~/dotfiles/nvim/lua/tats/keymaps.lua'
-alias vimo='nvim ~/dotfiles/nvim/lua/tats/options.lua'
-alias vimp='nvim ~/dotfiles/nvim/lua/tats/plugins.lua'
-alias nvims='nvim ~/dotfiles/nvim/lua/tats/keymaps.lua'
-alias nvimo='nvim ~/dotfiles/nvim/lua/tats/options.lua'
-alias nvimp='nvim ~/dotfiles/nvim/lua/tats/plugins.lua'
-
-alias python='python3'
-alias py='python3'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"

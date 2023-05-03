@@ -1,0 +1,24 @@
+# easier navigation
+alias ..='cd ..'
+alias ...='cd ../../'
+alias ....='cd ../../../'
+alias ~='cd ~'
+
+# better ls
+# need coreutils to call gls
+alias ls='gls --color=always --group-directories-first'
+alias la='gls -A --color=always --group-directories-first'
+alias ll='gls -Ahl --color=always --group-directories-first'
+
+alias so='source ~/.zshrc'
+
+alias vim='nvim'
+alias nvimp='nvim ~/dotfiles/nvim/'
+
+alias python='python3'
+alias py='python3'
+
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
+alias tks='tmux kill-session -t'
