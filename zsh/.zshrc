@@ -34,23 +34,19 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
-      export PROMPT=$'%B%F{197}[N]%f%b %2~ %B%F{209}\U00BB%f%b '
+      export PROMPT=$'%B%F{red}[N]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_INSERT)
-      export PROMPT=$'%B%F{114}[I]%f%b %2~ %B%F{209}\U00BB%f%b '
-      # Something you want to do...
+      export PROMPT=$'%B%F{green}[I]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL)
-      export PROMPT=$'%B%F{221}[V]%f%b %2~ %B%F{209}\U00BB%f%b '
-      # Something you want to do...
+      export PROMPT=$'%B%F{yellow}[V]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL_LINE)
-      export PROMPT=$'%B%F{123}[L]%f%b %2~ %B%F{209}\U00BB%f%b '
-      # Something you want to do...
+      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_REPLACE)
-      export PROMPT=$'%B%F{026}[R]%f%b %2~ %B%F{209}\U00BB%f%b '
-      # Something you want to do...
+      export PROMPT=$'%B%F{cyan}[R]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
   esac
 }
