@@ -52,7 +52,7 @@ function zvm_after_select_vi_mode() {
 }
 
 # show current time in right prompt
-export RPROMPT='%B%F{075}[%*]%f%b'
+export RPROMPT='%B%F{blue}[%*]%f%b'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
