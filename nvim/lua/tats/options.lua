@@ -1,7 +1,6 @@
 local options = {
   autoindent = true,
   clipboard = 'unnamedplus',
-  colorscheme = catppuccin,
   completeopt = {'menu','menuone','noselect'},
   encoding = 'utf-8',
   errorbells = false,

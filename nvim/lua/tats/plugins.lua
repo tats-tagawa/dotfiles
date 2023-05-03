@@ -31,11 +31,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use 'jacoborus/tender.vim'
   use 'jiangmiao/auto-pairs'
-  use { 'catppuccin/nvim', as = 'catppuccin' }
+  use { 'catppuccin/nvim', as = 'catppuccin',
+    after = 'lualine.nvim', }
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
   use {
     'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true },
   }
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.0',
