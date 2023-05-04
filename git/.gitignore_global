@@ -1,0 +1,37 @@
+# OS generated files
+*.DS_Store
+*.DS_Store?
+*._*
+*.Spotlight-V100
+*.Trashes
+ehthumbs.db
+Thumbs.db
+
+# archive/disk files
+*.zip
+*.dmg
+*.img
+*.tar.gz
+
+#vim
+*.swp
+
+#node_modules
+node_modules
+
+#ebook
+*.epub
+*.mobi
+*.pdf
+
+#home directories
+Applications
+Desktop
+Documents
+Downloads
+Library
+Mail
+Movies
+Music
+Pictures
+Public

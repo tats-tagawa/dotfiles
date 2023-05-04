@@ -1,7 +1,4 @@
 .DS_Store
 nvim/plugin/packer_compiled.lua
-tmux/plugins/tmux-continuum/
-tmux/plugins/tmux-resurrect/
-tmux/plugins/tmux-themepack/
-tmux/plugins/tpm/
-tmux/plugins/vim-tmux-navigator/
+tmux/plugins
+tmux/tpm
