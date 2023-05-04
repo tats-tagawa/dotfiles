@@ -12,6 +12,7 @@ api.map('l','D')
 api.map('H','E')
 api.map('L','R')
 
+// set ctrl-j to switch to last viewed tab
 api.map('<Ctrl-j>','<Ctrl-6>')
 
 // Follow link mode hints
