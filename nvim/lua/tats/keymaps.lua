@@ -4,8 +4,6 @@ vim.g.mapleader = " "
 local opts = { noremap = true, silent = true }
 local set_key = vim.keymap.set
 
-set_key("n", "<leader>r", ":source ~/.config/nvim/init.lua<cr>", opts)
-
 -- use JK as escape
 set_key("i", "jk", "<esc>", opts)
 set_key("v", "jk", "<esc>", opts)
@@ -33,3 +31,6 @@ set_key("n", "<C-h>", ":e #<cr>", opts)
 
 -- netrw
 set_key("n", "<leader>pv", vim.cmd.Ex, opts)
+
+-- change pwd to opened file
+set_key("n", "<leader>cd", ":cd %:h<cr>", opts)
