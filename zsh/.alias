@@ -13,7 +13,8 @@ alias ll='gls -Ahl --color=always --group-directories-first'
 alias so='source ~/.zshrc'
 
 alias vim='nvim'
-alias nvimp='nvim ~/dotfiles/nvim/'
+alias nvims='nvim ~/dotfiles/nvim/'
+alias vims='nvim ~/dotfiles/nvim/'
 
 alias python='python3'
 alias py='python3'
