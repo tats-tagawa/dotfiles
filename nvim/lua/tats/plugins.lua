@@ -62,6 +62,12 @@ return require('packer').startup(function(use)
   use 'dinhhuy258/git.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'christoomey/vim-tmux-navigator'
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+      require('Comment').setup()
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
