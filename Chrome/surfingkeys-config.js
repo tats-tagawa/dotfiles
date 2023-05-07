@@ -112,7 +112,15 @@ settings.theme = `
     padding-left: 5px;
 }
 
+#sk_status {
+    padding: 4px;
+    right: 1%;
+    bottom: 1%;
+    background-color: #1e1e2e;
+}
 #sk_status, #sk_find {
-    font-size: 20pt;
+    font-size: 16px;
+    color: #A6E3A1;
+
 }
 `;
