@@ -30,7 +30,9 @@ set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
 set_key("n", "<C-h>", ":e #<cr>", opts)
 
 -- netrw
-set_key("n", "<leader>pv", vim.cmd.Ex, opts)
+-- set_key("n", "<leader>pv", vim.cmd.Ex, opts)
+-- nvim-tree
+set_key("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
 
 -- change pwd to opened file
 set_key("n", "<leader>cd", ":cd %:h<cr>", opts)
