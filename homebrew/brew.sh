@@ -35,5 +35,35 @@ formulaes=(
   zsh-autosuggestions
 )
 
+casks=(
+  espanso
+  firefox
+  font-fira-code
+  font-fira-code-nerd-font
+  github
+  google-chrome
+  hammerspoon
+  iina
+  iterm2
+  kap
+  karabiner-elements
+  mimestream
+  netnewswire
+  qlmarkdown
+  raycast
+  shortcat
+  sioyek
+  soundsource
+  spotify
+  the-unarchiver
+  visual-studio-code
+  zoom
+)
+
 echo "Installing formulaes..."
 brew install ${formulaes[@]}
+
+echo "Installing casks..."
+brew install --cask ${casks[@]}
+
+echo "All homebrew formulaes/casks instlled"
