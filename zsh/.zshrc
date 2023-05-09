@@ -25,6 +25,10 @@ test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 # https://github.com/jeffreytse/zsh-vi-mode
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
+# load zsh-autosuggestions plugin
+# https://github.com/zsh-users/zsh-autosuggestions
+source $(brew --prefix)/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 # start in Insert Mode
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 

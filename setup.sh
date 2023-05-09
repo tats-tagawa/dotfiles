@@ -32,6 +32,7 @@ formulaes=(
   tree-sitter
   yt-dlp
   zsh-vi-mode
+  zsh-autosuggestions
 )
 
 echo "Installing formulaes..."
