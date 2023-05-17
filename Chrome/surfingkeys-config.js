@@ -2,8 +2,9 @@ settings.scrollStepSize = 400;
 settings.smoothScroll = true;
 settings.focusAfterClosed = 'last';
 settings.hintAlign = 'left';
-settings.tabsThreshold = 3;
+settings.tabsThreshold = 0;
 
+settings.blocklistPattern = /.*docs\.google\.com.*/i
 // set h/l to go back/forward in history
 api.map('h', 'S')
 api.map('l', 'D')
@@ -14,6 +15,9 @@ api.map('L', 'R')
 
 // set ctrl-j to switch to last viewed tab
 api.map('<Ctrl-j>', '<Ctrl-6>')
+
+// set o to open in active tab
+api.map('o', 'go')
 
 // Follow link mode hints
 api.Hints.style(' \
