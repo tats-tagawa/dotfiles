@@ -18,6 +18,16 @@ export VOLTA_HOME="$HOME/.volta"
 # source aliases
 source ~/.alias
 
+# History settings
+export HISTFILE=~/.histfile
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+setopt HIST_IGNORE_ALL_DUPS  # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS  # do not save duplicated command
+setopt HIST_REDUCE_BLANKS  # remove unnecessary blanks
+setopt INC_APPEND_HISTORY_TIME  # append command to history file immediately after execution
+setopt EXTENDED_HISTORY  # record command start time
+
 # set dircolors
 test -r "~/.dir_colors" && eval $(gdircolors ~/.dir_colors)
 
