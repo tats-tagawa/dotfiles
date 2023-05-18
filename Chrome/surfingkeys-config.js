@@ -4,7 +4,8 @@ settings.focusAfterClosed = 'last';
 settings.hintAlign = 'left';
 settings.tabsThreshold = 0;
 
-settings.blocklistPattern = /.*docs\.google\.com.*/i
+settings.blocklistPattern = /.*docs\.google\.com.*|.*mail\.google\.com.*|.*drive\.google\.com.*/i
+
 // set h/l to go back/forward in history
 api.map('h', 'S')
 api.map('l', 'D')
