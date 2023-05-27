@@ -4,6 +4,7 @@ export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/usr/local/bin/python3/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
+
 # better history searching with arrow keys
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
 autoload -U up-line-or-beginning-search
