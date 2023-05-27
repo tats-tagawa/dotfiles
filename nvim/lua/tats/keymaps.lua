@@ -14,7 +14,7 @@ set_key("v", "jk", "<esc>", opts)
 
 -- save and quit shortcuts
 set_key("n", "<leader>w", ":w<cr>", opts)
-set_key("n", "<leader>q", ":wq<cr>", opts)
+set_key("n", "<leader>q", ":q<cr>", opts)
 
 -- refresh file
 set_key("n", "<leader>ee", ":e!<cr>")
@@ -25,6 +25,12 @@ set_key("n", "<s-j>", "<nop>")
 -- move current line up/down
 set_key("n", "-", "ddp")
 set_key("n", "_", "ddkP")
+
+-- don't skip wrapped lines unless there is a count (ex. 3j)
+local expr = {silent = true, expr = true, remap = false}
+
+set_key('', 'j', "v:count ?  'j' : 'gj'", expr)
+set_key('', 'k', "v:count ?  'k' : 'gk'", expr)
 
 ----------------
 --- toggles ----
