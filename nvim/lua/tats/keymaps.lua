@@ -9,8 +9,8 @@ local set_key = vim.keymap.set
 ----------------
 
 -- use JK as escape
-set_key("i", "jk", "<esc>", opts)
-set_key("v", "jk", "<esc>", opts)
+-- set_key("i", "jk", "<esc>", opts)
+-- set_key("v", "jk", "<esc>", opts)
 
 -- save and quit shortcuts
 set_key("n", "<leader>w", ":w<cr>", opts)
