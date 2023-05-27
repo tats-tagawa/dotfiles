@@ -59,7 +59,6 @@ set_key("n", "<C-h>", ":e #<cr>", opts)
 --- navigation ----
 -------------------
 
-
 -- nvim-tree
 set_key("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
 
