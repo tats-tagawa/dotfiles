@@ -27,3 +27,4 @@ alias tks='tmux kill-session -t'
 alias hist="history -i"
 alias history="history -i"
 
+alias lg='lazygit'

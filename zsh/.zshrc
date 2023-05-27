@@ -39,6 +39,10 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # https://github.com/zsh-users/zsh-autosuggestions
 source $(brew --prefix)/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# load zsh-git-prompt plugin
+# https://github.com/olivierverdier/zsh-git-prompt
+source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
+
 # start in Insert Mode
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
@@ -66,7 +70,7 @@ function zvm_after_select_vi_mode() {
 }
 
 # show current time in right prompt
-export RPROMPT='%B%F{blue}[%*]%f%b'
+export RPROMPT='$(git_super_status) %B%F{blue}[%*]%f%b'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
