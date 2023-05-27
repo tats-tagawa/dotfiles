@@ -52,25 +52,25 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
-      export PROMPT=$'%B%F{blue}[N]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{blue}[N]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_INSERT)
-      export PROMPT=$'%B%F{green}[I]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{green}[I]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL)
-      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL_LINE)
-      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_REPLACE)
-      export PROMPT=$'%B%F{red}[R]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{red}[R]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
     ;;
   esac
 }
 
 # show current time in right prompt
-export RPROMPT='$(git_super_status) %B%F{blue}[%*]%f%b'
+export RPROMPT='%B%F{blue}[%*]%f%b'
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
