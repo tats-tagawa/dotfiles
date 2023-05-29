@@ -3,7 +3,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export PATH="/usr/local/bin/python3/:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
-
+export PATH="$PATH:/opt/homebrew/bin"
 
 # better history searching with arrow keys
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
