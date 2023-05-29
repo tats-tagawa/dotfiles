@@ -28,3 +28,5 @@ alias hist="history -i"
 alias history="history -i"
 
 alias lg='lazygit'
+
+alias gs='git status'

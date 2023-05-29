@@ -40,10 +40,6 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # https://github.com/zsh-users/zsh-autosuggestions
 source $(brew --prefix)/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# load zsh-git-prompt plugin
-# https://github.com/olivierverdier/zsh-git-prompt
-source $(brew --prefix)/opt/zsh-git-prompt/zshrc.sh
-
 # start in Insert Mode
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
@@ -53,19 +49,19 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
-      export PROMPT=$'%B%F{blue}[N]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{blue}[N]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_INSERT)
-      export PROMPT=$'%B%F{green}[I]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{green}[I]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL)
-      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL_LINE)
-      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
     $ZVM_MODE_REPLACE)
-      export PROMPT=$'%B%F{red}[R]%f%b %2~ $(git_super_status) %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'%B%F{red}[R]%f%b %2~ %B%F{blue}\U00BB%f%b '
     ;;
   esac
 }
