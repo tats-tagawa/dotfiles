@@ -68,7 +68,8 @@ return require('packer').startup(function(use)
       require('Comment').setup()
     end
   }
- use 'nvim-tree/nvim-tree.lua'
+  use 'nvim-tree/nvim-tree.lua'
+  use "lukas-reineke/indent-blankline.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
