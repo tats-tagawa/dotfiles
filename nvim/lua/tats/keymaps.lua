@@ -15,6 +15,7 @@ local set_key = vim.keymap.set
 -- save and quit shortcuts
 set_key("n", "<leader>w", ":w<cr>", opts)
 set_key("n", "<leader>q", ":q<cr>", opts)
+set_key("n", "<leader>Q", ":qa<cr>", opts)
 
 -- refresh file
 set_key("n", "<leader>ee", ":e!<cr>")
@@ -54,6 +55,15 @@ set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
 
 -- go to previous buffer
 set_key("n", "<C-h>", ":e #<cr>", opts)
+
+-------------------
+------ panes ------
+-------------------
+
+set_key("n", "C-J", "<C-W><C-J>")
+set_key("n", "C-K", "<C-W><C-K>")
+set_key("n", "C-L", "<C-W><C-L>")
+set_key("n", "C-H", "<C-W><C-H>")
 
 -------------------
 --- navigation ----
