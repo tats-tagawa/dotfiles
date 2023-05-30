@@ -29,9 +29,11 @@ set_key("n", "_", "ddkP")
 
 -- don't skip wrapped lines unless there is a count (ex. 3j)
 local expr = {silent = true, expr = true, remap = false}
-
 set_key('', 'j', "v:count ?  'j' : 'gj'", expr)
 set_key('', 'k', "v:count ?  'k' : 'gk'", expr)
+
+-- trigger highlight
+set_key('n', '<leader>no', ':noh<cr>')
 
 ----------------
 --- toggles ----
