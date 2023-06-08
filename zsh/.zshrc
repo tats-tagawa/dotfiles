@@ -17,6 +17,7 @@ export VOLTA_HOME="$HOME/.volta"
 
 # source aliases
 source ~/.alias
+source ~/.alias_local
 
 # History settings
 export HISTFILE=~/.histfile
