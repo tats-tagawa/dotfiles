@@ -1,7 +1,6 @@
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-export PATH="$HOME/.cargo/bin:$PATH"
 
 # better history searching with arrow keys
 # https://coderwall.com/p/jpj_6q/zsh-better-history-searching-with-arrow-keys
