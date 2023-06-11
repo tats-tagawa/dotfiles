@@ -1,5 +1,9 @@
+
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 local lspconfig = require('lspconfig')
 lspconfig.lua_ls.setup {
+  capabilities = capabilities,
   settings = {
     Lua = {
       runtime = {
@@ -23,7 +27,14 @@ lspconfig.lua_ls.setup {
   },
 }
 
-lspconfig.tsserver.setup{}
+
+lspconfig.tsserver.setup{
+  capabilities = capabilities,
+}
+
+lspconfig.pyright.setup{
+  capabilities = capabilities,
+}
 
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
