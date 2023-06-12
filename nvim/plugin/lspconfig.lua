@@ -1,4 +1,3 @@
-
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 local lspconfig = require('lspconfig')
@@ -12,7 +11,7 @@ lspconfig.lua_ls.setup {
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
-        globals = {'vim'},
+        globals = { 'vim' },
       },
       workspace = {
         -- Make the server aware of Neovim runtime files
@@ -28,11 +27,11 @@ lspconfig.lua_ls.setup {
 }
 
 
-lspconfig.tsserver.setup{
+lspconfig.tsserver.setup {
   capabilities = capabilities,
 }
 
-lspconfig.pyright.setup{
+lspconfig.pyright.setup {
   capabilities = capabilities,
 }
 
