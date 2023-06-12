@@ -18,14 +18,14 @@ set_key("n", "<leader>q", ":q<cr>", opts)
 set_key("n", "<leader>Q", ":qa<cr>", opts)
 
 -- refresh file
-set_key("n", "<leader>ee", ":e!<cr>")
+set_key("n", "<leader>ee", ":e!<cr>", opts)
 
 -- don't join with <s-j>
-set_key("n", "<s-j>", "<nop>")
+set_key("n", "<s-j>", "<nop>", opts)
 
 -- move current line up/down
-set_key("n", "-", "ddp")
-set_key("n", "_", "ddkP")
+set_key("n", "-", "ddp", opts)
+set_key("n", "_", "ddkP", opts)
 
 -- don't skip wrapped lines unless there is a count (ex. 3j)
 local expr = {silent = true, expr = true, remap = false}
@@ -33,13 +33,15 @@ set_key('', 'j', "v:count ?  'j' : 'gj'", expr)
 set_key('', 'k', "v:count ?  'k' : 'gk'", expr)
 
 -- trigger highlight
-set_key('n', '<leader>no', ':noh<cr>')
+set_key('n', '<leader>no', ':noh<cr>', opts)
 
+-- call mason
+set_key("n", "<leader>ma", ":Mason<cr>", opts)
 ----------------
 --- toggles ----
 ----------------
 
-set_key("n", "<leader>n", ":set relativenumber!<cr>")
+set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 
 ----------------
 --- buffer ----
