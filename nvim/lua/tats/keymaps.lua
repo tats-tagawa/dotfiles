@@ -61,15 +61,6 @@ set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
 set_key("n", "<C-h>", ":e #<cr>", opts)
 
 -------------------
------- panes ------
--------------------
-
-set_key("n", "C-J", "<C-W><C-J>")
-set_key("n", "C-K", "<C-W><C-K>")
-set_key("n", "C-L", "<C-W><C-L>")
-set_key("n", "C-H", "<C-W><C-H>")
-
--------------------
 --- navigation ----
 -------------------
 
