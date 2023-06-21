@@ -37,6 +37,7 @@ set_key('n', '<leader>no', ':noh<cr>', opts)
 
 -- call mason
 set_key("n", "<leader>ma", ":Mason<cr>", opts)
+
 ----------------
 --- toggles ----
 ----------------
@@ -44,13 +45,13 @@ set_key("n", "<leader>ma", ":Mason<cr>", opts)
 set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 
 ----------------
---- buffer ----
+---- buffer ----
 ----------------
 
 -- delete buffer
 set_key("n", "<leader>dd", ":bd<cr>", opts)
 
--- delete buffer but don't close pane
+-- delete buffer but don't close window
 set_key("n", "<leader>db", ":bp<bar>sp<bar>bn<bar>bd<cr>", opts)
 
 -- switch between buffers
@@ -60,12 +61,23 @@ set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
 -- go to previous buffer
 set_key("n", "<C-h>", ":e #<cr>", opts)
 
+----------------
+---- window ----
+----------------
+
+-- split window
+set_key("n", "<leader>|", ":vsplit<cr>", opts)
+set_key("n", "<leader>-", ":split<cr>", opts)
+
+-- delete window
+set_key("n", "<leader>dp", "<C-w>q", opts)
+
 -------------------
 --- navigation ----
 -------------------
 
 -- nvim-tree
-set_key("n", "<leader>nt", ":NvimTreeToggle<cr>", opts)
+set_key("n", "<C-n>", ":NvimTreeToggle<cr>", opts)
 
 -- change pwd to opened file
 set_key("n", "<leader>cd", ":cd %:h<cr>", opts)
