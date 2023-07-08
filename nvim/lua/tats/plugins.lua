@@ -63,14 +63,13 @@ return require('packer').startup(function(use)
   use 'dinhhuy258/git.nvim'
   use 'lewis6991/gitsigns.nvim'
   use 'christoomey/vim-tmux-navigator'
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
+  use 'numToStr/Comment.nvim'
   use 'nvim-tree/nvim-tree.lua'
   use "lukas-reineke/indent-blankline.nvim"
+  use({
+    "kylechui/nvim-surround",
+    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
