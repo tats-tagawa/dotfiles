@@ -14,6 +14,14 @@
 | `ctrl-i` | Go to newer position in jump list |
 | `ctrl-o` | Go to older position in jump list |
 
+
+## command mode
+| Keymap | Description |
+| ------ | ----------- |
+| `#,#co#` | Copy from line #,# to # |
+| | Ex. `-12,-10co2` |
+
+
 ## insert mode
 
 | Keymap | Description |

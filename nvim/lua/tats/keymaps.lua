@@ -23,10 +23,6 @@ set_key("n", "<leader>ee", ":e!<cr>", opts)
 -- don't join with <s-j>
 set_key("n", "<s-j>", "<nop>", opts)
 
--- move current line up/down
-set_key("n", "-", "ddp", opts)
-set_key("n", "_", "ddkP", opts)
-
 -- don't skip wrapped lines unless there is a count (ex. 3j)
 local expr = {silent = true, expr = true, remap = false}
 set_key('', 'j', "v:count ?  'j' : 'gj'", expr)
@@ -34,6 +30,11 @@ set_key('', 'k', "v:count ?  'k' : 'gk'", expr)
 
 -- trigger highlight
 set_key('n', '<leader>no', ':noh<cr>', opts)
+
+-- change text between _
+set_key('n', 'c_', 'T_ct_')
+-- delete text between _ and trailing _
+set_key('n', 'd_', 'T_df_')
 
 -- call mason
 set_key("n", "<leader>ma", ":Mason<cr>", opts)
