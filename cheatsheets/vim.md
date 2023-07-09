@@ -1,37 +1,51 @@
 # vim / neovim
 
-## normal mode
+## Normal Mode
 
+### Editing
 | Keymap | Description |
 | ------ | ----------- |
 | `~` | Swap case |
 | `gu` | Make lowercase |
 | `gU` | Make uppercase |
 | `!` | Filter to external program |
-| `<<` | Shift left |
-| `>>` | Shift right |
-| `==` | Indent |
+| `<` | Indent left |
+| `<<` | Indent current line left |
+| `r` | Indent left |
+| `>>` | Indent right |
+| `=` | Fix indentation |
+| `==` | Fix indentation of current line |
 | `ctrl-i` | Go to newer position in jump list |
 | `ctrl-o` | Go to older position in jump list |
 
+### Search and replace
+| Keymap | Description |
+| ------ | ----------- |
+| `/pattern` | search for pattern |
+| `?pattern` | search backward for pattern |
+| `:s/old/new/` | replace old with new in current line |
+| `:s/old/new/g` | replace all old with new in current line |
+| `:s/old/new/gc` | replace all old with new in current line with confirmation |
+| `:%s/old/new/g` | replace all old with new throughout file |
+| `:%s/old/new/gc` | replace all old with new throughout file with confirmation |
 
-## command mode
+### Copy / Paste
 | Keymap | Description |
 | ------ | ----------- |
 | `#,#co#` | Copy from line #,# to # |
 | | Ex. `-12,-10co2` |
 
 
-## insert mode
+## Insert mode
 
 | Keymap | Description |
 | ------ | ----------- |
 | `ctrl-r` | Insert text from a registar |
-| `ctrl-a` | Last inserted text |
 | `ctrl-p` | Previous matching completion |
 | `ctrl-n` | Next matching completion |
 
-## completion mode
+## Completion mode
+
 | Keymap | Description |
 | ------ | ----------- |
 | `ctrl-x` `ctrl-p` | Context aware word completion, previous |
