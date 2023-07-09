@@ -29,8 +29,7 @@ packer.init({
 
 return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
-  use 'jacoborus/tender.vim'
-  use 'jiangmiao/auto-pairs'
+  use 'windwp/nvim-autopairs'
   use { 'catppuccin/nvim', as = 'catppuccin',
     after = 'lualine.nvim', }
   use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
