@@ -54,19 +54,19 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
-      export PROMPT=$'%B%F{blue}[N]%f%b %2~ ${vcs_info_msg_0_}%B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{blue}[N]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{blue}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_INSERT)
-      export PROMPT=$'%B%F{green}[I]%f%b %2~ ${vcs_info_msg_0_}%B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{green}[I]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{green}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL)
-      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ ${vcs_info_msg_0_}%B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{magenta}[V]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{magenta}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL_LINE)
-      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ ${vcs_info_msg_0_}%B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{magenta}[L]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{magenta}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_REPLACE)
-      export PROMPT=$'%B%F{red}[R]%f%b %2~ ${vcs_info_msg_0_}%B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{red}[R]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{red}\U00BB\U00BB\U00BB%f%b '
     ;;
   esac
 }
