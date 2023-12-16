@@ -64,10 +64,43 @@
                                         "key_code": "escape"
                                     }
                                 ],
-                                "type": "basic"
+                  "type": "basic",
+                  "conditions": [
+                    {
+                      "type": "frontmost_application_unless",
+                      "bundle_identifiers": ["^org\\.Terraria$"]
+                    }
+                  ]
+                            }
+                        ]
+                    },{
+                        "description": "Change caps_lock to control in terraria",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": {
+                                        "optional": [
+                                            "any"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_control"
+                                    }
+                                ],
+                  "type": "basic",
+                  "conditions": [
+                    {
+                      "type": "frontmost_application_if",
+                      "bundle_identifiers": ["^org\\.Terraria$"]
+                    }
+                  ]
                             }
                         ]
                     },
+
                     {
                         "description": "Disable Command-Shift-Option-Control + Period (.) to Command-Shift-Option-Control + f17",
                         "manipulators": [
