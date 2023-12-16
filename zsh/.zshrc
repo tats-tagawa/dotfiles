@@ -36,6 +36,15 @@ source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # https://github.com/zsh-users/zsh-autosuggestions
 source $(brew --prefix)/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Load version control information
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+# Format the vcs_info_msg_0_ variable
+zstyle ':vcs_info:git:*' formats '(%b) '
+# Set up the prompt (with git branch name)
+setopt PROMPT_SUBST
+
 # start in Insert Mode
 ZVM_LINE_INIT_MODE=$ZVM_MODE_NORMAL
 
@@ -45,19 +54,19 @@ ZVM_VI_ESCAPE_BINDKEY=jk
 function zvm_after_select_vi_mode() {
   case $ZVM_MODE in
     $ZVM_MODE_NORMAL)
-      export PROMPT=$'%B%F{blue}[N]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{blue}[N]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{blue}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_INSERT)
-      export PROMPT=$'%B%F{green}[I]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{green}[I]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{green}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL)
-      export PROMPT=$'%B%F{magenta}[V]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{magenta}[V]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{magenta}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_VISUAL_LINE)
-      export PROMPT=$'%B%F{magenta}[L]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{magenta}[L]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{magenta}\U00BB\U00BB\U00BB%f%b '
     ;;
     $ZVM_MODE_REPLACE)
-      export PROMPT=$'%B%F{red}[R]%f%b %2~ %B%F{blue}\U00BB%f%b '
+      export PROMPT=$'\n%B%F{red}[R]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{red}\U00BB\U00BB\U00BB%f%b '
     ;;
   esac
 }

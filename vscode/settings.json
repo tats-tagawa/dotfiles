@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Flatland Monokai",
+  "workbench.colorTheme": "Catppuccin Mocha",
   "editor.fontSize": 16,
   "editor.cursorSurroundingLines": 5,
   // vim
@@ -34,6 +34,10 @@
       "commands": ["workbench.action.files.saveFiles"]
     },
     {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
       "before": ["<leader>", "1"],
       "commands": ["workbench.action.openEditorAtIndex1"]
     },
@@ -58,23 +62,22 @@
       "commands": ["workbench.action.openEditorAtIndex6"]
     }
   ],
-  "editor.wordWrap": "on",
-  "workbench.sideBar.location": "right",
+"editor.wordWrap": "on",
   "highlight-matching-tag.highlightFromContent": true,
   "terminal.integrated.fontSize": 14,
   "terminal.external.osxExec": "iTerm.app",
   "workbench.iconTheme": "vscode-icons",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.accessibilitySupport": "off",
-  "vsicons.dontShowNewVersionMessage": true,
-  "vim.vimrc.enable": true,
+"vsicons.dontShowNewVersionMessage": true,
   "editor.detectIndentation": false,
   "[json]": {
     "editor.quickSuggestions": {
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[javascript]": {
     "editor.maxTokenizationLineLength": 2500,
@@ -104,5 +107,11 @@
 "[lua]": {
     "editor.defaultFormatter": "Koihik.vscode-lua-format"
 },
-"git.openRepositoryInParentFolders": "never"
+"git.openRepositoryInParentFolders": "never",
+"git.autofetch": true,
+"git.confirmSync": false,
+"[xml]": {
+    "editor.defaultFormatter": "DotJoshJohnson.xml"
+},
+"window.zoomLevel": -1
 }
