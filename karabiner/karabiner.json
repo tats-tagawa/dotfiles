@@ -56,7 +56,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "right_control"
+                                        "key_code": "left"
                                     }
                                 ],
                                 "to_if_alone": [
