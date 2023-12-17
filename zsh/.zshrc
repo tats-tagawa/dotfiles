@@ -46,7 +46,7 @@ zstyle ':vcs_info:git:*' formats '(%b) '
 setopt PROMPT_SUBST
 
 # start in Insert Mode
-ZVM_LINE_INIT_MODE=$ZVM_MODE_NORMAL
+ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
 
 ZVM_VI_ESCAPE_BINDKEY=jk
 

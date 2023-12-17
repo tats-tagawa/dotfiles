@@ -1,79 +1,71 @@
-local ensure_packer = function()
-  local fn = vim.fn
-  local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-  if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
-    vim.cmd [[packadd packer.nvim]]
-    return true
+local function bootstrap_pckr()
+  local pckr_path = vim.fn.stdpath("data") .. "/pckr/pckr.nvim"
+
+  if not vim.loop.fs_stat(pckr_path) then
+    vim.fn.system({
+      'git',
+      'clone',
+      "--filter=blob:none",
+      'https://github.com/lewis6991/pckr.nvim',
+      pckr_path
+    })
   end
-  return false
+
+  vim.opt.rtp:prepend(pckr_path)
 end
 
-local packer_bootstrap = ensure_packer()
+bootstrap_pckr()
 
--- Use a protected call so we don't error out on first use
-local status_ok, packer = pcall(require, "packer")
-if not status_ok then
-  return
-end
-
--- Have packer use a popup window
-packer.init({
-  display = {
-    open_fn = function()
-      return require('packer.util').float({ border = 'single' })
-    end
-  }
-}
-)
-
-return require('packer').startup(function(use)
-  use 'wbthomason/packer.nvim'
-  use 'windwp/nvim-autopairs'
-  use { 'catppuccin/nvim', as = 'catppuccin',
-    after = 'lualine.nvim', }
-  use { 'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons' }
-  use {
+require('pckr').add{
+  'wbthomason/packer.nvim';
+  'windwp/nvim-autopairs';
+  {
+    'catppuccin/nvim',
+    as = 'catppuccin',
+    after = 'lualine.nvim',
+  };
+  {
+    'akinsho/bufferline.nvim',
+    -- tag = '*',
+    requires = 'nvim-tree/nvim-web-devicons'
+  };
+  {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true },
-  }
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    -- or                            , branch = '0.1.x',
+  };
+  {
+    'nvim-telescope/telescope.nvim', tag = '0.1.5',
     requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-  use {
+  };
+  {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-  }
-  use 'glepnir/lspsaga.nvim'
-  use 'jose-elias-alvarez/null-ls.nvim'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'L3MON4D3/LuaSnip'
-  use 'saadparwaiz1/cmp_luasnip'
-  use 'rafamadriz/friendly-snippets'
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'tpope/vim-commentary'
-  use 'dinhhuy258/git.nvim'
-  use 'lewis6991/gitsigns.nvim'
-  use 'christoomey/vim-tmux-navigator'
-  use 'numToStr/Comment.nvim'
-  use 'nvim-tree/nvim-tree.lua'
-  use "lukas-reineke/indent-blankline.nvim"
-  use({
+  };
+  'glepnir/lspsaga.nvim';
+  'jose-elias-alvarez/null-ls.nvim';
+  'hrsh7th/cmp-nvim-lsp';
+  'hrsh7th/cmp-buffer';
+  'hrsh7th/cmp-path';
+  'hrsh7th/cmp-cmdline';
+  'hrsh7th/nvim-cmp';
+  'L3MON4D3/LuaSnip';
+  'saadparwaiz1/cmp_luasnip';
+  'rafamadriz/friendly-snippets';
+  {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+  };
+  'tpope/vim-commentary';
+  'dinhhuy258/git.nvim';
+  'lewis6991/gitsigns.nvim';
+  'christoomey/vim-tmux-navigator';
+  'numToStr/Comment.nvim';
+  'nvim-tree/nvim-tree.lua';
+  "lukas-reineke/indent-blankline.nvim";
+  {
     "kylechui/nvim-surround",
-    tag = "*", -- Use for stability; omit to use `main` branch for the latest features
-  })
-    use 'karb94/neoscroll.nvim'
-
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+    -- tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  };
+  'karb94/neoscroll.nvim';
+}
