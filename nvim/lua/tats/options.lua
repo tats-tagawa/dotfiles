@@ -12,6 +12,7 @@ local options = {
   hlsearch = true,
   ignorecase = true,
   incsearch = true,
+  showmode = false,
   number = true,
   relativenumber = true,
   scrolloff = 10,
