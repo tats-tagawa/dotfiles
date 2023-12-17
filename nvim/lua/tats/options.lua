@@ -16,16 +16,31 @@ local options = {
   number = true,
   relativenumber = true,
   scrolloff = 10,
-  shiftwidth = 4,
+  shiftwidth = 2,
   showmatch = true,
   smartcase = true,
-  softtabstop = 4,
-  tabstop = 4,
+  softtabstop = 2,
+  tabstop = 2,
   termguicolors = true,
   wildignore = vim.opt.wildignore + '*.png,*.jpg,*.gif,*.DS_Store,*.swp,*.zip,*.dmg,*.tff',
   wildmode = 'longest,list,full',
 }
+
+-- Change tabspace amount if not personal machine
+local function get_hostname()
+  local f = io.popen('/bin/hostname')
+ local hostname = f:read('*a')
+  f:close()
+  hostname = string.gsub(hostname, '\n$', '')
+  return hostname
+end
+
+if get_hostname() ~= 'Miranda.local' then
+  options.softtabstop = 4
+  options.tabstop = 4
+  options.shiftwidth = 4
+end
+
 for k, v in pairs(options) do
   vim.opt[k] = v
 end
-
