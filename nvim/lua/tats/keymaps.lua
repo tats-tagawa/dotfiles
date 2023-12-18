@@ -56,8 +56,8 @@ set_key("n", "<leader>dd", ":bd<cr>", opts)
 set_key("n", "<leader>db", ":bp<bar>sp<bar>bn<bar>bd<cr>", opts)
 
 -- switch between buffers
-set_key("n", "<s-k><s-k>", ":bnext<cr>", opts)
-set_key("n", "<s-j><s-j>", ":bprev<cr>", opts)
+set_key("n", "<s-k><s-k>", ":bprev<cr>", opts)
+set_key("n", "<s-j><s-j>", ":bnext<cr>", opts)
 
 -- go to previous buffer
 set_key("n", "<C-h>", ":e #<cr>", opts)
