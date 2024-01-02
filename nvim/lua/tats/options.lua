@@ -12,6 +12,7 @@ local options = {
   hlsearch = true,
   ignorecase = true,
   incsearch = true,
+  listchars = 'space:·,tab:->',
   showmode = false,
   number = true,
   relativenumber = true,
