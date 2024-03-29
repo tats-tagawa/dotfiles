@@ -1,0 +1,7 @@
+gui:
+  theme:
+    selectedLineBgColor:
+      - '#333333'
+    activeBorderColor:
+      - '#fe640b'
+      - bold
