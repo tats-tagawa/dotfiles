@@ -13,7 +13,7 @@ require 'telescope'.setup({
       '%.zip',
       '%.dmg',
     },
-    layout_strategy = "horizontal",
+    layout_strategy = "vertical",
     layout_config = {
       horizontal = {
         prompt_position = "top",
@@ -33,3 +33,5 @@ set_key('v', '<leader>fr', builtin.registers, {})
 set_key('n', '<leader>fm', builtin.marks, {})
 set_key('n', '<leader>fs', builtin.search_history, {})
 set_key('n', '<leader>fc', builtin.command_history, {})
+set_key('n', '<leader>fd', builtin.diagnostics, {})
+set_key('n', '<leader>fj', builtin.jumplist, {})
