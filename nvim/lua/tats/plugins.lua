@@ -16,7 +16,7 @@ end
 
 bootstrap_pckr()
 
-require('pckr').add{
+require('pckr').add {
   'wbthomason/packer.nvim';
   'windwp/nvim-autopairs';
   {
@@ -35,7 +35,7 @@ require('pckr').add{
   };
   {
     'nvim-telescope/telescope.nvim', tag = '0.1.5',
-    requires = { { 'nvim-lua/plenary.nvim' } }
+    requires = { 'nvim-lua/plenary.nvim' }
   };
   {
     "williamboman/mason.nvim",
@@ -56,7 +56,6 @@ require('pckr').add{
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
   };
-  'tpope/vim-commentary';
   'dinhhuy258/git.nvim';
   'lewis6991/gitsigns.nvim';
   'christoomey/vim-tmux-navigator';
@@ -66,6 +65,10 @@ require('pckr').add{
   {
     "kylechui/nvim-surround",
     -- tag = "*", -- Use for stability; omit to use `main` branch for the latest features
+  };
+  {
+    "NeogitOrg/neogit",
+    "sindrets/diffview.nvim",
   };
   'karb94/neoscroll.nvim';
 }
