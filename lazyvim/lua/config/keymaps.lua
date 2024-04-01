@@ -5,9 +5,6 @@
 local opts = { noremap = true, silent = true }
 local set_key = vim.keymap.set
 
-set_key("n", "<leader>w", ":w<cr>", opts)
-set_key("n", "<leader>q", ":q<cr>", opts)
-
 -- don't join with <s-j>
 set_key("n", "<s-j>", "<nop>", opts)
 
