@@ -7,6 +7,29 @@ vim.g.autoformat = false
 
 local opt = vim.opt
 
+local options = {
+  backspace = 'indent,eol,start',
+  completeopt = {'menu','menuone','noselect'},
+  encoding = 'utf-8',
+  errorbells = false,
+  fileencoding = 'utf-8',
+  fileformats = 'unix,dos,mac',
+  hidden = true,
+  hlsearch = true,
+  incsearch = true,
+  listchars = 'space:·,tab:->',
+  showmatch = true,
+  smartcase = true,
+  softtabstop = 2,
+  tabstop = 2,
+  wildignore = opt.wildignore + '*.png,*.jpg,*.gif,*.DS_Store,*.swp,*.zip,*.dmg,*.tff',
+  wildmode = 'longest,list,full',
+}
+
+for k, v in pairs(options) do
+  opt[k] = v
+end
+
 -- Change tabspace amount if not personal machine
 local function get_hostname()
   local f = io.popen("/bin/hostname")
