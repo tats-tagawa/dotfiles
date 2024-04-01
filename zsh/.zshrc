@@ -47,8 +47,7 @@ setopt PROMPT_SUBST
 
 # start in Insert Mode
 ZVM_LINE_INIT_MODE=$ZVM_MODE_INSERT
-
-ZVM_VI_ESCAPE_BINDKEY=jk
+export PROMPT=$'\n%B%F{green}[I]%f%b %2~ ${vcs_info_msg_0_}\n%B%F{green}\U00BB\U00BB\U00BB%f%b '
 
 # the plugin will auto execute this zvm_after_select_vi_mode function
 function zvm_after_select_vi_mode() {
