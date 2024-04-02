@@ -15,3 +15,7 @@ set_key("", "k", "v:count ?  'k' : 'gk'", expr)
 
 -- set relativenumber
 set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
+
+-- center when <c-d> <c-u>
+set_key("n", "<c-u>", "<c-u>zz", opts)
+set_key("n", "<c-d>", "<c-d>zz", opts)
