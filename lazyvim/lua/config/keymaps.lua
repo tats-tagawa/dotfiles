@@ -3,6 +3,7 @@
 -- Add any additional keymaps here
 
 local opts = { noremap = true, silent = true }
+local opt = vim.opt
 local set_key = vim.keymap.set
 
 -- don't join with <s-j>
@@ -15,3 +16,23 @@ set_key("", "k", "v:count ?  'k' : 'gk'", expr)
 
 -- set relativenumber
 set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
+
+-- center when <c-d> <c-u>
+set_key("n", "<c-u>", "<c-u>zz", opts)
+set_key("n", "<c-d>", "<c-d>zz", opts)
+
+-- Set tab as two spaces
+set_key("n", "<leader>t2", function()
+  opt.softtabstop = 2
+  opt.tabstop = 2
+  opt.shiftwidth = 2
+  vim.print("Tab set as 2 spaces")
+end, opts)
+
+-- Set tab as four spaces
+set_key("n", "<leader>t4", function()
+  opt.softtabstop = 4
+  opt.tabstop = 4
+  opt.shiftwidth = 4
+  vim.print("Tab set as 4 spaces")
+end, opts)
