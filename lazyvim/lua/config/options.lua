@@ -12,6 +12,8 @@ local options = {
   backspace = 'indent,eol,start',
   completeopt = {'menu','menuone','noselect'},
   encoding = 'utf-8',
+  eof = false,
+  eol = false,
   errorbells = false,
   fileencoding = 'utf-8',
   fileformats = 'unix,dos,mac',
@@ -26,6 +28,7 @@ local options = {
   tabstop = 2,
   wildignore = opt.wildignore + '*.png,*.jpg,*.gif,*.DS_Store,*.swp,*.zip,*.dmg,*.tff',
   wildmode = 'longest,list,full',
+  wrap = true,
 }
 
 for k, v in pairs(options) do
