@@ -22,6 +22,7 @@ local options = {
   incsearch = true,
   listchars = 'space:·,tab:->',
   list = false,
+  swapfile = false,
   showmatch = true,
   smartcase = true,
   softtabstop = 2,
