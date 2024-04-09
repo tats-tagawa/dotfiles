@@ -3,17 +3,17 @@ local TelescopeColor = {
   TelescopeMatching = { fg = colors.flamingo },
   TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
 
-  TelescopePromptPrefix = { bg = colors.surface0 },
-  TelescopePromptNormal = { bg = colors.surface0 },
-  TelescopePromptBorder = { bg = colors.surface0, fg = colors.surface0 },
-  TelescopePromptTitle = { bg = colors.surface0, fg = colors.pink },
+  TelescopePromptPrefix = { bg = colors.mantle },
+  TelescopePromptNormal = { bg = colors.mantle },
+  TelescopePromptBorder = { bg = colors.mantle, fg = colors.text },
+  TelescopePromptTitle = { bg = colors.mantle, fg = colors.pink },
 
   TelescopeResultsNormal = { bg = colors.mantle },
-  TelescopeResultsBorder = { bg = colors.mantle, fg = colors.mantle },
+  TelescopeResultsBorder = { bg = colors.mantle, fg = colors.text },
   TelescopeResultsTitle = { bg = colors.mantle, fg = colors.blue },
 
   TelescopePreviewNormal = { bg = colors.mantle },
-  TelescopePreviewBorder = { bg = colors.mantle, fg = colors.mantle },
+  TelescopePreviewBorder = { bg = colors.mantle, fg = colors.text },
   TelescopePreviewTitle = { bg = colors.mantle, fg = colors.green },
 }
 
