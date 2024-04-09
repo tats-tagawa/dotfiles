@@ -61,5 +61,8 @@
         "/Users/tatsumi.tagawa/.local/share/nvim/lazy/noice.nvim/lua",
         "/Users/tatsumi.tagawa/dotfiles/lazyvim/lua",
         "${3rd}/luv/library"
+    ],
+    "diagnostics.globals": [
+        "vim"
     ]
 }
