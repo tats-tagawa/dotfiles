@@ -2,6 +2,7 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local wk = require("which-key")
 local opts = { noremap = true, silent = true }
 local opt = vim.opt
 local set_key = vim.keymap.set
@@ -21,18 +22,24 @@ set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 set_key("n", "<c-u>", "<c-u>zz", opts)
 set_key("n", "<c-d>", "<c-d>zz", opts)
 
--- Set tab as two spaces
-set_key("n", "<leader>t2", function()
-  opt.softtabstop = 2
-  opt.tabstop = 2
-  opt.shiftwidth = 2
-  vim.print("Tab set as 2 spaces")
-end, opts)
-
--- Set tab as four spaces
-set_key("n", "<leader>t4", function()
-  opt.softtabstop = 4
-  opt.tabstop = 4
-  opt.shiftwidth = 4
-  vim.print("Tab set as 4 spaces")
-end, opts)
+wk.register({
+  ["<leader>t"] = { name = "tabspace" },
+  ["<leader>t2"] = {
+    function()
+      opt.softtabstop = 2
+      opt.tabstop = 2
+      opt.shiftwidth = 2
+      vim.print("Tab set as 2 spaces")
+    end,
+    "Set tab as 2 spaces"
+  },
+  ["<leader>t4"] = {
+    function()
+      opt.softtabstop = 4
+      opt.tabstop = 4
+      opt.shiftwidth = 4
+      vim.print("Tab set as 4 spaces")
+    end,
+    "Set tab as 4 spaces"
+  }
+})
