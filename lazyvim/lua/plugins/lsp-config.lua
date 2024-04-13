@@ -11,7 +11,8 @@ return {
           "terraformls",
           "marksman",
           "ruff_lsp",
-        }
+        },
+        automatic_installation = true
       })
     end
   },
