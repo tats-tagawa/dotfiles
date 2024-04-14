@@ -3,18 +3,18 @@ local TelescopeColor = {
   TelescopeMatching = { fg = colors.flamingo },
   TelescopeSelection = { fg = colors.text, bg = colors.surface0, bold = true },
 
-  TelescopePromptPrefix = { bg = colors.mantle },
-  TelescopePromptNormal = { bg = colors.mantle },
-  TelescopePromptBorder = { bg = colors.mantle, fg = colors.text },
-  TelescopePromptTitle = { bg = colors.mantle, fg = colors.pink },
+  TelescopePromptPrefix = { bg = colors.base },
+  TelescopePromptNormal = { bg = colors.base },
+  TelescopePromptBorder = { bg = colors.base, fg = colors.text },
+  TelescopePromptTitle = { bg = colors.base, fg = colors.pink },
 
-  TelescopeResultsNormal = { bg = colors.mantle },
-  TelescopeResultsBorder = { bg = colors.mantle, fg = colors.text },
-  TelescopeResultsTitle = { bg = colors.mantle, fg = colors.blue },
+  TelescopeResultsNormal = { bg = colors.base },
+  TelescopeResultsBorder = { bg = colors.base, fg = colors.text },
+  TelescopeResultsTitle = { bg = colors.base, fg = colors.blue },
 
-  TelescopePreviewNormal = { bg = colors.mantle },
-  TelescopePreviewBorder = { bg = colors.mantle, fg = colors.text },
-  TelescopePreviewTitle = { bg = colors.mantle, fg = colors.green },
+  TelescopePreviewNormal = { bg = colors.base },
+  TelescopePreviewBorder = { bg = colors.base, fg = colors.text },
+  TelescopePreviewTitle = { bg = colors.base, fg = colors.green },
 }
 
 for hl, col in pairs(TelescopeColor) do
