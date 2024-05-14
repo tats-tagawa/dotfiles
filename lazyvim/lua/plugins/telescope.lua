@@ -32,6 +32,15 @@ return {
       },
       sorting_strategy = "ascending",
       winblend = 0,
+      file_ignore_patterns = {
+        "node_modules/.*",
+        ".git/.*",
+        ".github/.*",
+        ".gitignore",
+        "Backups/.*",
+        ".circleci.*",
+        "package.*",
+      }
     },
   },
 }
