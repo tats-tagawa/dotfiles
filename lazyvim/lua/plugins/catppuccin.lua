@@ -13,6 +13,13 @@ return {
           surface1 = "#555555",
         },
       },
+      custom_highlights = function(colors)
+        return {
+          LineNrAbove = { fg = colors.overlay0 },
+          LineNr = { fg = colors.subtext1, },
+          LineNrBelow = { fg = colors.overlay0 },
+        }
+      end
     },
   },
   {
