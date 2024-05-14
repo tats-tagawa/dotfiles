@@ -15,9 +15,9 @@ return {
       },
       custom_highlights = function(colors)
         return {
-          LineNrAbove = { fg = colors.overlay0 },
-          LineNr = { fg = colors.subtext1, },
-          LineNrBelow = { fg = colors.overlay0 },
+          LineNrAbove = { fg = colors.overlay1, },
+          CursorLineNr = { fg = colors.text, },
+          LineNrBelow = { fg = colors.overlay1 },
         }
       end
     },
