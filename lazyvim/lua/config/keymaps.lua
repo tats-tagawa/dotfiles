@@ -22,6 +22,10 @@ set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 set_key("n", "<c-u>", "<c-u>zz", opts)
 set_key("n", "<c-d>", "<c-d>zz", opts)
 
+-- swap : and ;
+set_key("n", ";", ":", opts)
+set_key("n", ":", ";", opts)
+
 wk.register({
   ["<leader>t"] = { name = "tabspace" },
   ["<leader>t2"] = {
