@@ -22,24 +22,33 @@ set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 set_key("n", "<c-u>", "<c-u>zz", opts)
 set_key("n", "<c-d>", "<c-d>zz", opts)
 
-wk.register({
-  ["<leader>t"] = { name = "tabspace" },
-  ["<leader>t2"] = {
+-- swap : and ;
+set_key("n", ";", ":", opts)
+set_key("n", ":", ";", opts)
+
+  -- {
+    -- { "<leader>t", group = "tabspace" },
+    -- { "<leader>t2", <function 1>, desc = "Set tab as 2 spaces" },
+    -- { "<leader>t4", <function 1>, desc = "Set tab as 4 spaces" },
+  -- }
+wk.add({
+  {"<leader>t", group = "tabspace" },
+  {"<leader>t2",
     function()
       opt.softtabstop = 2
       opt.tabstop = 2
       opt.shiftwidth = 2
       vim.print("Tab set as 2 spaces")
     end,
-    "Set tab as 2 spaces"
+    desc = "Set tab as 2 spaces"
   },
-  ["<leader>t4"] = {
+  {"<leader>t4",
     function()
       opt.softtabstop = 4
       opt.tabstop = 4
       opt.shiftwidth = 4
       vim.print("Tab set as 4 spaces")
     end,
-    "Set tab as 4 spaces"
-  }
+    desc = "Set tab as 4 spaces"
+  },
 })
