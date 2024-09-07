@@ -16,8 +16,8 @@ alias vim='nvim'
 alias nvims='nvim ~/dotfiles/nvim/'
 alias vims='nvim ~/dotfiles/nvim/'
 
-alias python='python3'
-alias py='python3'
+alias python='python3.11'
+alias py='python3.11'
 
 alias tls='tmux ls'
 alias tas='tmux attach -t'

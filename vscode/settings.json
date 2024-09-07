@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Catppuccin Mocha",
-  "editor.fontSize": 16,
+  "editor.fontSize": 14,
   "editor.cursorSurroundingLines": 5,
   // vim
   "vim.cursorStylePerMode.insert": "line",
@@ -11,7 +11,7 @@
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
   "editor.fontFamily": "'Fira Code',Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontLigatures": true,
+  "editor.fontLigatures": false,
   "vim.cursorStylePerMode.replace": "underline",
   "vim.cursorStylePerMode.visualblock": "block",
   "vim.cursorStylePerMode.visualline": "block",
@@ -65,8 +65,7 @@
 "editor.wordWrap": "on",
   "highlight-matching-tag.highlightFromContent": true,
   "terminal.integrated.fontSize": 14,
-  "terminal.external.osxExec": "iTerm.app",
-  "workbench.iconTheme": "vscode-icons",
+"terminal.external.osxExec": "iTerm.app",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.accessibilitySupport": "off",
 "vsicons.dontShowNewVersionMessage": true,
@@ -113,5 +112,7 @@
 "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
 },
-"window.zoomLevel": -1
+"window.zoomLevel": -1,
+"files.autoSave": "onFocusChange",
+"git.confirmEmptyCommits": false
 }
