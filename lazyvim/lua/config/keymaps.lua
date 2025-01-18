@@ -23,8 +23,8 @@ set_key("n", "<c-u>", "<c-u>zz", opts)
 set_key("n", "<c-d>", "<c-d>zz", opts)
 
 -- swap : and ;
-set_key("n", ";", ":", opts)
-set_key("n", ":", ";", opts)
+-- set_key("n", ";", ":", opts)
+-- set_key("n", ":", ";", opts)
 
   -- {
     -- { "<leader>t", group = "tabspace" },
