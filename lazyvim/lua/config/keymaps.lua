@@ -18,20 +18,11 @@ set_key("", "k", "v:count ?  'k' : 'gk'", expr)
 -- set relativenumber
 set_key("n", "<leader>n", ":set relativenumber!<cr>", opts)
 
--- center when <c-d> <c-u>
-set_key("n", "<c-u>", "<c-u>zz", opts)
-set_key("n", "<c-d>", "<c-d>zz", opts)
+-- copy filename to clipboard
+set_key("n", "<leader>cp", ':let @+ = expand("%")<cr>', opts)
 
--- swap : and ;
-set_key("n", ";", ":", opts)
-set_key("n", ":", ";", opts)
-
-  -- {
-    -- { "<leader>t", group = "tabspace" },
-    -- { "<leader>t2", <function 1>, desc = "Set tab as 2 spaces" },
-    -- { "<leader>t4", <function 1>, desc = "Set tab as 4 spaces" },
-  -- }
 wk.add({
+  {"<leader>fC", ':let @+ = expand("%")<cr>', desc = "Copy File Name", mode = "n"},
   {"<leader>t", group = "tabspace" },
   {"<leader>t2",
     function()
@@ -40,7 +31,7 @@ wk.add({
       opt.shiftwidth = 2
       vim.print("Tab set as 2 spaces")
     end,
-    desc = "Set tab as 2 spaces"
+    desc = "Set Tab as 2 Spaces"
   },
   {"<leader>t4",
     function()
@@ -49,6 +40,6 @@ wk.add({
       opt.shiftwidth = 4
       vim.print("Tab set as 4 spaces")
     end,
-    desc = "Set tab as 4 spaces"
+    desc = "Set Tab as 4 Spaces"
   },
 })

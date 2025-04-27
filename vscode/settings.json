@@ -10,7 +10,7 @@
   "vim.highlightedyank.enable": true,
   "vim.smartRelativeLine": true,
   "vim.useSystemClipboard": true,
-  "editor.fontFamily": "'Fira Code',Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "'JetBrainsMono Nerd Font',Menlo, Monaco, 'Courier New', monospace",
   "editor.fontLigatures": false,
   "vim.cursorStylePerMode.replace": "underline",
   "vim.cursorStylePerMode.visualblock": "block",
@@ -97,7 +97,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "workbench.startupEditor": "none",
-  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
 },
@@ -114,5 +114,35 @@
 },
 "window.zoomLevel": -1,
 "files.autoSave": "onFocusChange",
-"git.confirmEmptyCommits": false
+"git.confirmEmptyCommits": false,
+"gitlens.views.scm.grouped.views": {
+    "commits": true,
+    "branches": true,
+    "remotes": true,
+    "stashes": true,
+    "tags": true,
+    "worktrees": true,
+    "contributors": true,
+    "repositories": false,
+    "searchAndCompare": false,
+    "launchpad": true
+},
+"zenMode.hideLineNumbers": false,
+"workbench.editor.editorActionsLocation": "titleBar",
+"editor.inlineSuggest.syntaxHighlightingEnabled": true,
+"workbench.activityBar.location": "hidden",
+"zenMode.fullScreen": false,
+"zenMode.silentNotifications": false,
+"zenMode.centerLayout": false,
+"chat.commandCenter.enabled": false,
+"chat.detectParticipant.enabled": false,
+"chat.editing.confirmEditRequestRemoval": false,
+"chat.editing.confirmEditRequestRetry": false,
+"chat.experimental.statusIndicator.enabled": false,
+"workbench.tips.enabled": false,
+"inlineChat.lineNaturalLanguageHint": false,
+"keyboard.touchbar.enabled": false,
+"update.showReleaseNotes": false,
+"inlineChat.holdToSpeech": false,
+"zenMode.hideStatusBar": false
 }
