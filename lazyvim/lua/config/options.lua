@@ -22,6 +22,7 @@ local options = {
   listchars = "space:␣,tab:» ,trail:■,eol:↲",
   list = false,
   swapfile = false,
+  shiftwidth = 2,
   showmatch = true,
   smartcase = true,
   softtabstop = 2,
