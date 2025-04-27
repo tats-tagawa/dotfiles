@@ -14,6 +14,7 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # source aliases
 source ~/.alias
 source ~/.alias_local
+source ~/.secrets
 
 # History settings
 export HISTFILE=~/.histfile
@@ -79,3 +80,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # okta
 source /Users/tatsumi.tagawa/.config/op/plugins.sh
+
+# Created by `pipx` on 2025-04-25 22:36:23
+export PATH="$PATH:/Users/tatsumi.tagawa/.local/bin"

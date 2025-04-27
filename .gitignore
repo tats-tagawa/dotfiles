@@ -2,3 +2,6 @@
 nvim/plugin/packer_compiled.lua
 tmux/plugins
 tmux/tpm
+lazyvim/lazy-lock.json
+.secrets
+*.ipynb
